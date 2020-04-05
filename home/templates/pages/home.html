@@ -1,0 +1,13 @@
+{% extends 'pages/base.html' %}
+{% block title %}HOME{% endblock  %}
+{% block content %}
+<h1> Image dir </h1>
+{{ link }}
+<label for="your_name">Your name: </label>
+<input id="your_name" type="text" name="your_name" maxlength="100" required>
+<form action='' method="POST">
+    {% csrf_token %}
+    {{ form}}
+    <input type="submit" value="Submit">
+</form>
+{% endblock  %}
